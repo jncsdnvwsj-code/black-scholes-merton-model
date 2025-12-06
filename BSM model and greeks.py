@@ -9,8 +9,8 @@ def phi(x):
 
 N = 365
 n = 10000
-K = float(input("Enter the value of the strike price of the Asian call: "))
-T = float(input("Enter the maturity in years of the Asian call: "))
+K = float(input("Enter the value of the strike price of the European call: "))
+T = float(input("Enter the maturity in years of the European call: "))
 S = float(input("Enter the initial stock price: "))
 vol = float(input("Enter the volatility of the stock: "))
 r = float(input("Enter the rate of return of the stock: "))
