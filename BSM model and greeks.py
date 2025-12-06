@@ -30,7 +30,7 @@ def d_1(x):
     return (log(S/K) + (r + vol**2 / 2)*T)/(vol * sqrt(T))
 
 def d_2(x):
-    return (log(S/K) + (r - vol**2 / 2)*T)/(vol * sqrt(T))
+    return d_1 - vol * sqrt(T)
 
 def BS_european_price(x):
     return x*phi(d_1(x)) - K * exp(-r*T)*phi(d_2(x))
