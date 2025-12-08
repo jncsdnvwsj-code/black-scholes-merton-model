@@ -13,7 +13,6 @@ S = float(input("Enter the initial stock price: "))
 vol = float(input("Enter the volatility of the stock: "))
 r = float(input("Enter the rate of return of the stock: "))
 
-
 def d_1(S, K, vol, r, T):   
     return (log(S/K) + (r + vol**2 / 2)*T)/(vol * sqrt(T))
 
