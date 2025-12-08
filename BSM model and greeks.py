@@ -7,8 +7,6 @@ from scipy.stats import norm
 def phi(x):
     return norm.cdf(x)
 
-N = 365
-n = 1000
 K = float(input("Enter the value of the strike price of the European call: "))
 T = float(input("Enter the maturity in years of the European call: "))
 S = float(input("Enter the initial stock price: "))
