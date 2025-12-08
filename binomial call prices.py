@@ -21,7 +21,7 @@ def BinomialStock(p,alpha,sigma,S0,T,N):
         StockPrices[i,i]=StockPrices[i-1,i-1]*exp(d)
     return [TimePoints,StockPrices.T]
     
-[TimePoints,StockPrices]=BinomialStock(0.5,0.01,0.2,10,1/12,5)
+[TimePoints,StockPrices]=BinomialStock(0.5,0.01,0.2,10,1/12,1000)
 print("TimePoints:\n",TimePoints)
 print("StockPrices:\n", StockPrices)
 
@@ -55,7 +55,7 @@ def BinomialEuropean(p,alpha,sigma,r,S0,K,T,N,OptionType):
             Price[i,N-j-1]=exp(-r*h)*(q_u * Price[i,N-j]+q_d * Price[i+1,N-j])
     return(Price)
 
-print("Binomial European price:\n",BinomialEuropean(0.5,0.01,0.2,0.01,10,10,1/12,5,StandardCall))
+print("Binomial European price:\n",BinomialEuropean(0.5,0.01,0.2,0.01,10,10,1/12,1000,StandardCall))
 
 #Define binomial American call price
 def BinomialAmerican(p,alpha,sigma,r,S0,K,T,N,OptionType):
