@@ -19,7 +19,7 @@ def stock_price_path():
     return path
 
 
-M = 10000
+M = 100
 plt.figure(figsize=(10, 6))
 
 for _ in range(M):
